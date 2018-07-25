@@ -1423,7 +1423,7 @@ z-index: 999;
 .shiping_tupian{
 	width: 296px;
 	height: 180px;
-	background-color: pink;
+	/*background-color: pink;*/
 	position: relative;
 	cursor: pointer;
 }

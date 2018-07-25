@@ -200,8 +200,8 @@ window.onload=function () {
     let banner_img=banner.querySelector(".banner_img");
     let img=banner_img.querySelectorAll("img");
     let yuanniu=document.querySelectorAll(".yuanniu");
-    let banner_btn=document.querySelectorAll(".banner_btn ")
-    // console.log(banner_btn);
+    let banner_btn=document.querySelectorAll(".banner_btn");
+    // console.log(banner_btn[0]);
     let flag=true;
 
     let now=0;
@@ -213,20 +213,21 @@ window.onload=function () {
             next=0;
         }
         img[next].style.left=widths+"px";
-        animate(img[next],{left:0});
         animate(img[now],{left:-widths});
+        animate(img[next],{left:0});
+
         yuanniu[next].classList.add("hot");
         yuanniu[now].classList.remove("hot")
         now=next;
 
     }
-    let t=setInterval(fn,2500);
+    let t3=setInterval(fn,2500);
 
     banner_img.onmouseenter = function () {
-        clearInterval(t);
+        clearInterval(t3);
     }
     banner_img.onmouseleave = function () {
-        t = setInterval(fn, 2000);
+        t3= setInterval(fn, 2500);
 
     }
 
@@ -239,40 +240,41 @@ window.onload=function () {
                 next=img.length-1;
             }
             img[next].style.left=-widths+"px";
+            animate(img[now],{left:widths});
             animate(img[next],{left:0},function () {
                 flag=true;
             });
-            animate(img[now],{left:widths});
-             yuanniu[next].classList.add("hot");
+
+            yuanniu[next].classList.add("hot");
             yuanniu[now].classList.remove("hot")
             now=next;
 
     }
     function move1() {
         next++;
-        if(next>=img.length-1){
+        if(next>img.length-1){
             next=0;
         }
         img[next].style.left=widths+"px";
+        animate(img[now],{left:-widths});
         animate(img[next],{left:0},function () {
             flag=true;
         });
-        animate(img[now],{left:-widths});
+
         yuanniu[next].classList.add("hot");
-        yuanniu[now].classList.remove("hot")
+        yuanniu[now].classList.remove("hot");
         now=next;
 
     }
-    banner_btn[0].onclick=move;
-    banner_btn[1].onclick=move1;
+
 
     banner_btn[0].onclick=function(){
         if(flag==false){
             return;
         }
-        if(next==img.length-1){
-            return
-        }
+        // if(next==0){
+        //     return;
+        // }
         flag=false;
         move();
     }
@@ -281,13 +283,14 @@ window.onload=function () {
         if(flag==false){
             return;
         }
-        if(next==0){
-            return
-        }
+        // if(next==img.length-1){
+        //     return;
+        // }
         flag=false;
         move1();
     }
-
+    // banner_btn[0].onclick=move;
+    // banner_btn[1].onclick=move1;
 
 
 
@@ -394,8 +397,8 @@ window.onload=function () {
 
 
 
-        weinituijian_btn[0].onclick=con_move1;
-        weinituijian_btn[1].onclick=con_move;
+        // weinituijian_btn[0].onclick=con_move1;
+        // weinituijian_btn[1].onclick=con_move;
 
         div.forEach(function (element,index) {
             element.onclick=function () {
