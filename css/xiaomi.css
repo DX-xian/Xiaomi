@@ -351,6 +351,64 @@ z-index: 999;
 	left:0;
 	top: 0;
 }
+.whatStage{
+	width: 234px;
+	height: 31px;
+	/*background-color: #33ddff;*/
+	text-align: center;
+	line-height: 31px;
+	color: #EF3A3B;
+	font-size: 20px;
+	padding-top: 15px;
+	/*font-weight: bolder;*/
+}
+.star_box{
+	width: 46px;
+	height: 46px;
+	background-color: #605751;
+	color: #fff;
+	font-size: 24px;
+	line-height: 46px;
+	float: left;
+	text-align: center;
+}
+.flash{
+	width: 34px;
+	height: 53px;
+	/*margin: 0 auto;*/
+	margin: 25px auto;
+}
+.star_dosh{
+	width: 15px;
+	float: left;
+	line-height: 46px;
+	color: #605751;
+	font-size: 28px;
+	text-align: center;
+}
+.shan_wenzi{
+	width: 234px;
+	height: 22px;
+	/*background-color: #76a9ff;*/
+	font-size: 14px;
+	color: #EF3A3B;
+	text-align: center;
+	line-height: 22px;
+}
+.dangjishi{
+	width: 168px;
+	height: 46px;
+	margin:28px 33px 0;
+	/*background-color: #9FC766;*/
+}
+
+
+
+
+.star_bottom .flash img{
+	width: 34px;
+	height: 53px;
+}
 .star_title{
 	color: #333;
 	font-size: 21px;

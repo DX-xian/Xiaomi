@@ -458,6 +458,53 @@ window.onload=function () {
         shangou.style.transform = "translateX("+(-xnum*time)+"px)";
     }
 
+
+
+
+    //闪购倒计时
+    fn11()
+    function fn11() {
+        let dangjishi = document.querySelector(".dangjishi");
+        let star_box = dangjishi.querySelectorAll(".star_box");
+
+        let arr = [];
+
+        let newDate = new Date();
+        let time2 = newDate.getTime();
+        let date = new Date(2030, 8, 26, 18);
+        let time1 = date.getTime();
+        let time6 = time1 - time2;
+
+
+        let mouth = Math.floor(time6 / (30 * 24 * 60 * 60 * 1000));
+        time6 = time6 % (30 * 24 * 60 * 60 * 1000);
+        // arr.push(mouth);
+
+        let day = Math.floor(time6 / (24 * 60 * 60 * 1000));
+        time6 = time6 % (24 * 60 * 60 * 1000);
+        // arr.push(day);
+
+        let hour = Math.floor(time6 / (60 * 60 * 1000));
+        time6 = time6 % (60 * 60 * 1000);
+        arr.push(hour);
+
+        let min = Math.floor(time6 / (60 * 1000));
+        time6 = time6 % (60 * 1000);
+        arr.push(min);
+
+        let sec = Math.floor(time6 / (1000));
+        time6 = time6 % (1000);
+        arr.push(sec);
+        // console.log(arr);
+
+        for (let i = 0; i < star_box.length; i++) {
+            star_box[i].innerText = arr[i]
+        }
+
+    }
+
+
+    setInterval(fn11,1000)
 }
 
 
