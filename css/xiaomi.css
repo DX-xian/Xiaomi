@@ -72,7 +72,7 @@ z-index: 999;
     font-weight: normal;
     color: black;
     display: inline;
-    transition: all 1s;
+    transition: all .1s;
     /*display: none;*/
 }
 
@@ -231,7 +231,7 @@ z-index: 999;
 	left: 0;
 	/*border-top: 1px solid #e0e0e0;*/
 	/*box-shadow: 0 5px 5px rgba(0,0,0,0.1);*/
-	transition: all .5s linear;
+	transition: all .1s linear;
 	background-color: white;
 	z-index: 999999;
 	/*display: none;*/
@@ -1643,6 +1643,7 @@ z-index: 999;
 .yingjian_bottom .yingjian_jingshuiqi:hover{
 	box-shadow: 0 10px 20px 1px #2FABA0;
 	transform: translateY(-10px);
+	transition: all 0.5s linear;
 
 }
 
