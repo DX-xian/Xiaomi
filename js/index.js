@@ -1,35 +1,93 @@
 window.onload=function () {
     // 购物车
-    let head_car = document.getElementsByClassName("head_car")[0];
-    let shopping_meun = head_car.getElementsByClassName("shopping_meun")[0];
-    // shopping_meun.style.display="none";
-    head_car.onmouseenter = function () {
-        // shopping_meun.style.display="block";
-        shopping_meun.style.height = "85px";
-        shopping_meun.style.boxShadow = " 0 2px 10px rgba(0,0,0,0.15)";
+    // let head_car = document.getElementsByClassName("head_car")[0];
+    // let shopping_meun = head_car.getElementsByClassName("shopping_meun")[0];
+    // // shopping_meun.style.display="none";
+    // head_car.onmouseenter = function () {
+    //     // shopping_meun.style.display="block";
+    //     shopping_meun.style.height = "85px";
+    //     shopping_meun.style.boxShadow = " 0 2px 10px rgba(0,0,0,0.15)";
 
-    }
-    head_car.onmouseleave = function () {
-        // shopping_meun.style.display="none";
-        shopping_meun.style.height = 0;
-        shopping_meun.style.boxShadow = "none"
+    // }
+    // head_car.onmouseleave = function () {
+    //     // shopping_meun.style.display="none";
+    //     shopping_meun.style.height = 0;
+    //     shopping_meun.style.boxShadow = "none"
 
 
-    }
+    // }
+
+    $('.head_car').mouseenter(function(){
+       
+        $(".shopping_meun").css("height","85px")
+       
+        $(".shopping_meun").css("box-shadow","0 2px 10px rgba(0,0,0,0.15)")
+    })
+    $('.head_car').mouseleave(function(){
+        $(".shopping_meun").css("height","0")
+
+        $(".shopping_meun").css("box-shadow","none")
+
+       
+    })
+
+
     // 导航
     let search = document.getElementsByClassName("search")[0];
     let lis3 = search.getElementsByTagName("li");
     let search_drop = search.getElementsByClassName("search_drop");
-    for (let i = 0; i < lis3.length - 2; i++) {
-        lis3[i].onmouseenter = function () {
-            search_drop[i].style.height = "230px";
-            search_drop[i].style.boxShadow = " 0 2px 10px rgba(0,0,0,0.15)";
+    // let nav_list=doucument.querySelector(".nav-list");
+    let search_dropCenter=document.querySelectorAll(".search_dropCenter")
+    // for (let i = 0; i < lis3.length - 2; i++) {
+    //     lis3[i].onmouseenter = function () {
+
+    //         search_drop[i].style.height = "230px";
+    //         search_drop[i].style.boxShadow = " 0 2px 10px rgba(0,0,0,0.15)";
+    //     }
+    //     lis3[i].onmouseleave = function () {
+    //         search_drop[i].style.height = "0";
+    //         search_drop[i].style.boxShadow = " none";
+    //     }
+    // }
+    // console.log(lis3)
+    $(".nav-list").mouseenter(function(){
+        $(".search_drop")[0].style.height="230px";
+        $(".search_drop")[0].style.boxShadow = " 0 2px 10px rgba(0,0,0,0.15)";
+
+        for (let i = 0; i < lis3.length ; i++) {
+                lis3[i].onmouseenter = function () {
+        
+                    search_dropCenter[i].style.height = "230px";
+                    // search_drop[i].style.boxShadow = " 0 2px 10px rgba(0,0,0,0.15)";
+                }
+                lis3[i].onmouseleave = function () {
+                    search_dropCenter[i].style.height = "0";
+                    // search_drop[i].style.boxShadow = " none";
+                }
         }
-        lis3[i].onmouseleave = function () {
-            search_drop[i].style.height = "0";
-            search_drop[i].style.boxShadow = " none";
-        }
-    }
+        
+    })
+    $(".nav-list").mouseleave(function(){
+        $(".search_drop")[0].style.height="0";
+        $(".search_drop")[0].style.boxShadow = " none";
+
+        
+        
+    })
+    $(".star_btn2").css("color","#B2B0B0");
+    $(".star_btn1").click(function(){
+        $(".star_btn2").css("color","#B2B0B0");
+        $(".star_btn1").css("color","#e0e0e0");
+
+    })
+    $(".star_btn2").click(function(){
+        $(".star_btn1").css("color","#B2B0B0");
+        $(".star_btn2").css("color","#e0e0e0");
+
+    })
+
+
+
 
 
     // banner

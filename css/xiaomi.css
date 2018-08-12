@@ -73,7 +73,6 @@ z-index: 999;
     color: black;
     display: inline;
     transition: all .1s;
-    /*display: none;*/
 }
 
 
@@ -175,10 +174,11 @@ z-index: 999;
 	margin: auto;
 }
 .nav-list{
-	width: 668px;
+	width: 511px;
 	height: 100px;
 	/* background-color: yellow; */
-	margin-left: 240px;
+	margin-left: 50px;
+	float: left;
 	/* position: relative; */
 
 }
@@ -190,42 +190,62 @@ z-index: 999;
 	text-align: center;
 	/* height: 17px; */
 	cursor: pointer;
+	/* background-color: #3736ff; */
 }
 .search_list1{
 	width: 84px;
 }
 .search_list2{
 	width: 52px;
+	margin-left: -5px;
 }
 .search_list3{
 	width: 52px;
+	margin-left: -5px;
 }
 .search_list4{
 	width: 68px;
+	margin-left: -5px;
 }
 .search_list5{
 	width: 52px;
+	margin-left: -5px;
 }
 .search_list6{
 	width: 52px;
+	margin-left: -5px;
 }
 .search_list7{
-	width: 68px;
+	width: 68px;margin-left: -5px;
+
 }
 .search_list8{
 	width: 84px;
+	margin-left: -5px;
+
+
 }
 .search_list9{
 	width: 52px;
+	/* margin-left: -5px; */
+	line-height: 100px;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    /* height: 17px; */
+	cursor: pointer;
+	float: left;
+
 }
 .search_list10{
 	width: 52px;
+	margin-left: -5px;
 }
 
 .search_drop{
 	width: 100%;
 	height: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
 	/*display: none;*/
 	position: absolute;
 	left: 0;
@@ -239,8 +259,11 @@ z-index: 999;
 .search_dropCenter{
 	width: 1240px;
 
-	height: 230px;
+	/* height: 230px; */
 	margin: 0 auto;
+	height:0;
+	overflow: hidden;
+	transition: all .1s linear;
 	/* background-color: purple; */
 }
 .search_1{
@@ -1323,9 +1346,9 @@ z-index: 999;
 	/*color: #FF6700;*/
 	/*border-bottom: 2px solid #FF6700;*/
 /*}*/
-.star_btn1:hover{
+/* .star_btn1:hover{
 	color: #B2B0B0;
-}
+} */
 .star_btn2:hover{
 	color: #B2B0B0;
 }
